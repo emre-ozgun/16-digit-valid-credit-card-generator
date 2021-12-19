@@ -40,7 +40,7 @@ const generateValidCardNumbers = (n = 100) => {
 		`Out of ${n} trials => ${validCardNumbers.length} valid cards are generated`
 	);
 
-	return validCardNumbers;
+	return [...new Set(validCardNumbers)];
 };
 
-console.log(generateValidCardNumbers(100));
+console.log(generateValidCardNumbers(1000000));
